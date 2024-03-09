@@ -1,0 +1,136 @@
+paths:
+  /byid:
+    get:
+      tags:
+        - Movie
+      summary: Get Movie by IMDb ID
+      operationId: byId
+      parameters:
+        - name: i
+          in: query
+          description: IMDb ID of the movie or series
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/MovieDetail"
+        '401':
+          description: Not authenticated
+          schema:
+            $ref: "#/definitions/Error"
+Get Series Details by Season
+Retrieves information about a series for a specific season.
+
+yaml
+Copy code
+paths:
+  /byseason:
+    get:
+      tags:
+        - Series
+      summary: Get Series by Season
+      operationId: bySeason
+      parameters:
+        - name: i
+          in: query
+          description: IMDb ID of the series
+          required: true
+          type: string
+        - name: Season
+          in: query
+          description: Season number
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/SeasonDetail"
+        '401':
+          description: Not authenticated
+          schema:
+            $ref: "#/definitions/Error"
+Get Episode by Series and Episode Number
+Retrieves details about a specific episode of a series.
+
+yaml
+Copy code
+paths:
+  /byepisode:
+    get:
+      tags:
+        - Episode
+      summary: Get Episode by Number
+      operationId: byEpisode
+      parameters:
+        - name: i
+          in: query
+          description: IMDb ID of the series
+          required: true
+          type: string
+        - name: Season
+          in: query
+          description: Season number
+          required: true
+          type: integer
+        - name: Episode
+          in: query
+          description: Episode number
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/EpisodeDetail"
+        '401':
+          description: Not authenticated
+          schema:
+            $ref: "#/definitions/Error"
+Get Movies by Box Office
+Retrieves a list of movies sorted by box office earnings.
+
+yaml
+Copy code
+paths:
+  /byboxoffice:
+    get:
+      tags:
+        - BoxOffice
+      summary: Get Movies by Box Office
+      operationId: byBoxOffice
+      parameters:
+        - name: count
+          in: query
+          description: Number of movies to return
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            $ref: "#/definitions/MoviesList"
+        '401':
+          description: Not authenticated
+          schema:
+            $ref: "#/definitions/Error"
+Search People
+Searches for actors, directors, and other film industry professionals.
+
+yaml
+Copy code
+paths:
+  /searchpeople:
+    get:
+      tags:
+        - People
+      summary: Search Film Industry Professionals
+      operationId: searchPeople
+      parameters:
+        - name: q
+          in: query
+          description: Name of the actor, director, or professional
+          required: true
+          type: string

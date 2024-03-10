@@ -13,7 +13,7 @@ To replicate and validate the findings of the original AGORA study, focusing on 
 
 a. How does the performance of AGORA scale with larger datasets of API requests and responses? Are there any bottlenecks in the system as the dataset size increases?
 
-b. How does detecting and reducing duplicate input requests affect the performance of AGORA's API testing process? (Data deduplication using threshold value)
+b. How does detecting and reducing duplicate input requests affect the results (if captures new invariants?) of AGORA's API testing process? (Data deduplication using threshold value)
 
 **Prerequisites**
 

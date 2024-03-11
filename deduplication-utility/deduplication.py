@@ -7,7 +7,7 @@ df = pd.read_csv("Spotify_GetArtistAlbums_10K.csv")
 def limit_duplicates(df, subset, threshold=5):
     return df.groupby(subset, as_index=False).head(threshold)
 
-limited_df = limit_duplicates(df, ['querySrtingParameter','operationId', 'path', 'httpMethod'])
+limited_df = limit_duplicates(df, ['queryParameters','operationId', 'path', 'httpMethod'])
 
 limited_df.to_csv('Spotify_GetArtistAlbums_10K.csv', index=False)
 

@@ -1,0 +1,13 @@
+failed to get console mode for stdout: The handle is invalid.
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };daikon.inv.unary.string.OneOfString;(return.Source)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;input.i == return.imdbID;daikon.inv.binary.twoString.StringEqual;(input.i, return.imdbID)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Production == return.Website;daikon.inv.binary.twoString.StringEqual;(return.Production, return.Website)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Response == "True";daikon.inv.unary.string.OneOfString;(return.Response)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.Response)==4;daikon.inv.unary.string.FixedLengthString;(return.Response)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.Released)==11;daikon.inv.unary.string.FixedLengthString;(return.Released)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Poster is Url;daikon.inv.unary.string.IsUrl;(return.Poster)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.imdbRating)==3;daikon.inv.unary.string.FixedLengthString;(return.imdbRating)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Type one of { "episode", "movie", "series" };daikon.inv.unary.string.OneOfString;(return.Type)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Production == "N/A";daikon.inv.unary.string.OneOfString;(return.Production)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.Production)==3;daikon.inv.unary.string.FixedLengthString;(return.Production)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.totalSeasons is Numeric;daikon.inv.unary.string.IsNumeric;(return.totalSeasons)

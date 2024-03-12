@@ -1,0 +1,17 @@
+failed to get console mode for stdout: The handle is invalid.,,
+,,
+No return from procedure observed 1 time.  Unmatched entries are ignored!,,
+  main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input) : 1 invocation,,
+End of report for procedures not returned from.  Unmatched entries are ignored!,,
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };daikon.inv.unary.string.OneOfString;(return.Source)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Response one of { "False", "True" };daikon.inv.unary.string.OneOfString;(return.Response),
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.imdbRating)==3;daikon.inv.unary.string.FixedLengthString;(return.imdbRating),,
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Type one of { "movie", "series" };daikon.inv.unary.string.OneOfString;(return.Type),
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Production one of { "Dino de Laurentiis Cinematografica", "N/A", "Universal Pictures" };daikon.inv.unary.string.OneOfString;(return.Production)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Website == "N/A";daikon.inv.unary.string.OneOfString;(return.Website),,
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.Website)==3;daikon.inv.unary.string.FixedLengthString;(return.Website),,
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Response == "True";daikon.inv.unary.string.OneOfString;(return.Response),,
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.Response)==4;daikon.inv.unary.string.FixedLengthString;(return.Response),,
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Type one of { "episode",,
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Production == return.Website;daikon.inv.binary.twoString.StringEqual;(return.Production,,
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Type one of { "episode",,

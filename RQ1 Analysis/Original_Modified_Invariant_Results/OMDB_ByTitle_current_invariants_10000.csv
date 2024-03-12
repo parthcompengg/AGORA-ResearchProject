@@ -1,0 +1,8 @@
+failed to get console mode for stdout: The handle is invalid.
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };daikon.inv.unary.string.OneOfString;(return.Source)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;input.i == return.imdbID;daikon.inv.binary.twoString.StringEqual;(input.i, return.imdbID)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Response == "True";daikon.inv.unary.string.OneOfString;(return.Response)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.Response)==4;daikon.inv.unary.string.FixedLengthString;(return.Response)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Type one of { "episode", "movie", "series" };daikon.inv.unary.string.OneOfString;(return.Type)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Website == "N/A";daikon.inv.unary.string.OneOfString;(return.Website)
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.Website)==3;daikon.inv.unary.string.FixedLengthString;(return.Website)
